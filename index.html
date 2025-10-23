@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>周加恩 Chiu Ka-un</title>
+    <title>周加恩 Chiu Ka-un | AI 電馭寫作</title>
     <style>
         * {
             margin: 0;
@@ -13,138 +13,335 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-            background: #1a1a1a;
-            color: #ffffff;
-            line-height: 1.6;
-            padding: 40px 20px;
+            background: #ffffff;
+            color: #2d2d2d;
+            line-height: 1.7;
         }
         
         .container {
-            max-width: 680px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(180deg, #fffbf0 0%, #ffffff 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5em;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        
+        .hero .highlight {
+            color: #d4a017;
+            font-weight: 600;
+        }
+        
+        /* Story Section */
+        .story {
+            padding: 80px 20px;
+            max-width: 800px;
             margin: 0 auto;
         }
         
-        .header {
+        .story p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #444;
+            margin-bottom: 25px;
+        }
+        
+        .story .big-text {
+            font-size: 1.35em;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin: 40px 0;
+            line-height: 1.6;
+        }
+        
+        /* Free Courses Section */
+        .free-courses {
+            background: #fef9e7;
+            padding: 80px 20px;
+        }
+        
+        .free-courses h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .free-courses .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
             margin-bottom: 60px;
         }
         
-        h1 {
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .course-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(212, 160, 23, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(212, 160, 23, 0.25);
+        }
+        
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #d4a017 0%, #f4c430 100%);
+        }
+        
+        .course-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f4c430 0%, #d4a017 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 2.5em;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #ffffff;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(212, 160, 23, 0.3);
         }
         
-        .subtitle {
-            font-size: 1.2em;
-            color: #cccccc;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        
-        .highlight {
-            color: #f4c430;
-            font-weight: 500;
-        }
-        
-        .section {
-            margin-bottom: 50px;
-        }
-        
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #f4c430;
+        .course-card h3 {
+            font-size: 1.4em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
             font-weight: 600;
         }
         
-        p {
-            font-size: 1.1em;
-            color: #e0e0e0;
-            margin-bottom: 20px;
-            line-height: 1.8;
+        .course-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.05em;
         }
         
+        .course-label {
+            display: inline-block;
+            background: #d4a017;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* CTA Section */
         .cta-section {
+            background: #1a1a1a;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            color: #cccccc;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
             background: #252525;
             padding: 40px;
-            border-radius: 8px;
-            margin-top: 60px;
-            border-left: 4px solid #f4c430;
-        }
-        
-        .cta-title {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-        
-        .cta-description {
-            color: #cccccc;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
         
         .form-placeholder {
-            background: #1a1a1a;
-            padding: 30px;
-            border-radius: 4px;
+            padding: 40px;
             text-align: center;
             color: #999;
             font-style: italic;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 2px dashed #444;
         }
         
+        /* Footer */
         .footer {
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid #333;
+            background: #f8f8f8;
+            padding: 40px 20px;
             text-align: center;
-            color: #666;
-            font-size: 0.9em;
+            color: #999;
+            font-size: 0.95em;
         }
         
-        a {
-            color: #f4c430;
+        .footer a {
+            color: #d4a017;
             text-decoration: none;
         }
         
-        a:hover {
+        .footer a:hover {
             text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2em;
+            }
+            
+            .story p {
+                font-size: 1.05em;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>周加恩</h1>
-            <p class="subtitle">
-                我把每篇文章當成<span class="highlight">「貨幣」看待</span>，你拿發現規現給多有趣的事情。
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>未來，已經到來。</h1>
+            <p class="tagline">
+                很快就有一天，使用 AI 寫作會跟使用鍵盤打字一樣<span class="highlight">輕鬆自然</span>
             </p>
-        </header>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story">
+        <p>
+            是每個寫作者必備的基礎知識。而知道如何掌控 AI 來為你寫作，會是這門知識的核心。
+        </p>
         
-        <section class="section">
-            <h2>關於我</h2>
-            <p>
-                我是一名內容創作者，專注於 AI 寫作與內容策略。我相信在這個內容大通膨的時代，真正的問題不是「AI 寫作＝爛、手寫＝好」，而是如何善用 AI 的力量強化自己的寫作能力。
-            </p>
-            <p>
-                我的部落格「<a href="https://blog.chiukaun.com" target="_blank">書不起</a>」分享關於內容創作、AI 協作、以及如何在這個時代建立有價值的內容。
-            </p>
-        </section>
+        <p>
+            我花了半年的時間整理我對寫作的所有技術，打造了一門《AI 電馭寫作》的課程，教你如何用 AI 輔助你大幅提升文章產能。
+        </p>
         
-        <section class="cta-section">
-            <h3 class="cta-title">領取免費 AI 寫作課程</h3>
-            <p class="cta-description">
-                想要學習如何善用 AI 提升你的寫作能力？留下你的 email，免費獲得我的 AI 寫作入門課程。
-            </p>
-            <div class="form-placeholder">
-                [ 在這裡放入你的 ConvertKit 表單嵌入碼 ]
+        <p class="big-text">
+            這套 AI 協作技術，讓我過去寫一篇兩千字的文章，從五個小時變成平均 30 分鐘，足足提升了 10x。
+        </p>
+        
+        <p>
+            甚至，有許多文章都是我躺在沙發上，用手機操作完成的。
+        </p>
+        
+        <p>
+            為什麼可以這樣？因為我發現，<strong>寫作跟寫程式的底層邏輯是一模一樣的事情</strong>。
+        </p>
+        
+        <p>
+            工程師最討厭反覆的勞力活，於是把大量既定寫好的函數，變成函數圖書館，需要的時候就隨時呼叫。現在有了 AI，我們就可以像工程師一樣寫作，把大量的反覆勞力活交給 AI，需要的時候隨時呼叫。
+        </p>
+        
+        <p>
+            而且我也讓過去複雜難解的寫作過程，變成一個清晰的生產流程，每個階段都有對應的目標和提詞協助。
+        </p>
+        
+        <p class="big-text">
+            這套方法，讓寫文章的過程，變成一種「Vibe Writing」。我稱之為<strong>「電馭寫作」</strong>。
+        </p>
+        
+        <p>
+            寫作是任何人都可以接觸到的強大內容槓桿，我靠寫作達成了人生翻身，走入下一個境界，認識各種貴人。
+        </p>
+        
+        <p>
+            如果你心中有熱情，總想分享自己的想法，但不確定怎樣開始；如果你經營品牌小團隊，很清楚內容經營品牌是必要的策略，但就是沒有時間精力人力；如果你是個人創業者，你需要極致應用你的每一分每一秒有限時間資源，創造最大價值——
+        </p>
+        
+        <p class="big-text">
+            我想幫助你達成你的目標。因為，<strong>我們都值得一次，讓實力被看見的機會。</strong>
+        </p>
+    </section>
+
+    <!-- Free Courses Section -->
+    <section class="free-courses">
+        <div class="container">
+            <h2>領取兩個免費課程</h2>
+            <p class="subtitle">填寫表單後，立即寄送到你的信箱</p>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <span class="course-label">免費課程一</span>
+                    <div class="course-icon">📖</div>
+                    <h3>如何用 AI 寫出自己的獨特風格</h3>
+                    <p>學習如何在使用 AI 輔助寫作的同時，保持你個人的獨特聲音和風格。</p>
+                </div>
+                
+                <div class="course-card">
+                    <span class="course-label">免費課程二</span>
+                    <div class="course-icon">✨</div>
+                    <h3>創作者躍遷：從零到一的 10 個寫作心法</h3>
+                    <p>每天寄送一封，分成十封發送。帶你建立扎實的寫作思維與習慣。</p>
+                </div>
             </div>
-        </section>
-        
-        <footer class="footer">
-            <p>© 2025 周加恩 Chiu Ka-un</p>
-        </footer>
-    </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>準備好開始了嗎？</h2>
+            <p>《AI 電馭寫作》課程已經進入第二波銷售階段。填寫以下問題，我會把課程相關資訊，以及免費課程寄到你的信箱中。</p>
+            
+            <div class="form-container">
+                <div class="form-placeholder">
+                    [ 在這裡放入你的 ConvertKit 表單嵌入碼 ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 周加恩 Chiu Ka-un | <a href="https://blog.chiukaun.com" target="_blank">書不起部落格</a></p>
+    </footer>
 </body>
 </html>
 
