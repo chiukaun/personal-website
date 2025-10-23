@@ -12,66 +12,140 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 40px 20px;
         }
         
         .container {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            max-width: 600px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            margin-bottom: 60px;
         }
         
         h1 {
             font-size: 2.5em;
-            color: #333;
+            font-weight: 600;
             margin-bottom: 20px;
+            color: #ffffff;
         }
         
-        .joke-container {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 10px;
-        }
-        
-        .joke {
+        .subtitle {
             font-size: 1.2em;
-            line-height: 1.6;
-            color: #555;
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            color: #f4c430;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #f4c430;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .cta-section {
+            background: #252525;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 60px;
+            border-left: 4px solid #f4c430;
+        }
+        
+        .cta-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .cta-description {
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+        
+        .form-placeholder {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 4px;
+            text-align: center;
+            color: #999;
+            font-style: italic;
         }
         
         .footer {
-            margin-top: 30px;
-            color: #999;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
             font-size: 0.9em;
+        }
+        
+        a {
+            color: #f4c430;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>👋 歡迎來到我的網站</h1>
-        
-        <div class="joke-container">
-            <p class="joke">
-                為什麼 AI 寫作課程總是客滿？<br><br>
-                因為 ChatGPT 說：「我可以幫你寫任何東西，除了我自己的課程介紹。」
+        <header class="header">
+            <h1>周加恩</h1>
+            <p class="subtitle">
+                我把每篇文章當成<span class="highlight">「貨幣」看待</span>，你拿發現規現給多有趣的事情。
             </p>
-        </div>
+        </header>
         
-        <div class="footer">
-            <p>🚀 網站部署測試中...</p>
-        </div>
+        <section class="section">
+            <h2>關於我</h2>
+            <p>
+                我是一名內容創作者，專注於 AI 寫作與內容策略。我相信在這個內容大通膨的時代，真正的問題不是「AI 寫作＝爛、手寫＝好」，而是如何善用 AI 的力量強化自己的寫作能力。
+            </p>
+            <p>
+                我的部落格「<a href="https://blog.chiukaun.com" target="_blank">書不起</a>」分享關於內容創作、AI 協作、以及如何在這個時代建立有價值的內容。
+            </p>
+        </section>
+        
+        <section class="cta-section">
+            <h3 class="cta-title">領取免費 AI 寫作課程</h3>
+            <p class="cta-description">
+                想要學習如何善用 AI 提升你的寫作能力？留下你的 email，免費獲得我的 AI 寫作入門課程。
+            </p>
+            <div class="form-placeholder">
+                [ 在這裡放入你的 ConvertKit 表單嵌入碼 ]
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>© 2025 周加恩 Chiu Ka-un</p>
+        </footer>
     </div>
 </body>
 </html>
+
 
