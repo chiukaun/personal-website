@@ -13,107 +13,204 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-            background: #ffffff;
-            color: #2d2d2d;
-            line-height: 1.7;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
         
         /* Hero Section */
         .hero {
-            text-align: center;
-            padding: 80px 20px 60px;
-            background: linear-gradient(180deg, #fffbf0 0%, #ffffff 100%);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 80px;
+            background: #fafafa;
         }
         
-        .hero h1 {
-            font-size: 3.5em;
+        .hero-content {
+            width: 100%;
+        }
+        
+        .hero-content h1 {
+            font-size: 5.5em;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            line-height: 1.2;
+            line-height: 1.1;
+            margin-bottom: 80px;
+            letter-spacing: -0.03em;
+            color: #0a1f44;
         }
         
-        .hero .tagline {
-            font-size: 1.5em;
-            color: #666;
-            font-weight: 300;
+        .hero-content .highlight {
+            color: #f4c430;
+        }
+        
+        .newsletter-section {
+            display: grid;
+            grid-template-columns: 1fr auto 1.2fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1000px;
+        }
+        
+        .newsletter-left h3 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #0a1f44;
+        }
+        
+        .newsletter-left p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .arrow-divider {
+            font-size: 4em;
+            color: #f4c430;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .newsletter-right h3 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            color: #0a1f44;
+        }
+        
+        .newsletter-right .formkit-form {
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        
+        .cta-box .formkit-form {
+            background: transparent;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 120px 0 80px;
+            background: #0a1f44;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9em;
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto 60px;
+        }
+        
+        .about-text h2 {
+            font-size: 3em;
             margin-bottom: 40px;
+            font-weight: 700;
+            color: #ffffff;
         }
         
-        .hero .highlight {
-            color: #d4a017;
-            font-weight: 600;
+        .about-text h2 span {
+            color: #f4c430;
+        }
+        
+        .letter-intro {
+            font-size: 1.15em;
+            color: #4db8ff;
+            margin-bottom: 60px;
+            font-style: italic;
         }
         
         /* Story Section */
         .story {
-            padding: 80px 20px;
+            padding: 100px 0;
+            background: #ffffff;
+        }
+        
+        .story-content {
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .story p {
+        .story-content p {
             font-size: 1.15em;
             line-height: 1.9;
             color: #444;
             margin-bottom: 25px;
+            text-align: left;
         }
         
-        .story .big-text {
+        .story-content .big-text {
             font-size: 1.35em;
             font-weight: 500;
-            color: #1a1a1a;
+            color: #0a1f44;
             margin: 40px 0;
-            line-height: 1.6;
         }
         
-        /* Free Courses Section */
-        .free-courses {
-            background: #fef9e7;
-            padding: 80px 20px;
+        /* Courses Section */
+        .courses {
+            padding: 120px 0;
+            background: #fafafa;
         }
         
-        .free-courses h2 {
+        .courses h2 {
             text-align: center;
-            font-size: 2.5em;
-            color: #1a1a1a;
+            font-size: 2.8em;
             margin-bottom: 20px;
+            font-weight: 700;
+            color: #0a1f44;
         }
         
-        .free-courses .subtitle {
+        .courses .subtitle {
             text-align: center;
             font-size: 1.2em;
             color: #666;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
         
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 900px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .course-card {
             background: #ffffff;
-            border-radius: 12px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 40px rgba(212, 160, 23, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 50px 40px;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
         
         .course-card:hover {
+            border-color: #f4c430;
             transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(212, 160, 23, 0.25);
+            box-shadow: 0 10px 30px rgba(244, 196, 48, 0.15);
         }
         
         .course-card::before {
@@ -121,29 +218,30 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, #d4a017 0%, #f4c430 100%);
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f4c430, #d4a017);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
-        .course-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #f4c430 0%, #d4a017 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-            margin-bottom: 25px;
-            box-shadow: 0 8px 20px rgba(212, 160, 23, 0.3);
+        .course-card:hover::before {
+            opacity: 1;
+        }
+        
+        .course-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: #f4c430;
+            margin-bottom: 20px;
+            line-height: 1;
         }
         
         .course-card h3 {
-            font-size: 1.4em;
-            color: #1a1a1a;
+            font-size: 1.5em;
             margin-bottom: 15px;
             font-weight: 600;
+            color: #0a1f44;
         }
         
         .course-card p {
@@ -152,69 +250,57 @@
             font-size: 1.05em;
         }
         
-        .course-label {
-            display: inline-block;
-            background: #d4a017;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
         /* CTA Section */
-        .cta-section {
-            background: #1a1a1a;
-            padding: 80px 20px;
+        .cta {
+            padding: 120px 0;
+            background: #0a1f44;
             text-align: center;
         }
         
-        .cta-section h2 {
+        .cta h2 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.2;
             color: #ffffff;
-            font-size: 2.5em;
-            margin-bottom: 25px;
         }
         
-        .cta-section p {
-            color: #cccccc;
+        .cta .highlight {
+            color: #f4c430;
+        }
+        
+        .cta p {
             font-size: 1.2em;
-            margin-bottom: 40px;
+            color: #ccc;
+            margin-bottom: 50px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        .form-container {
+        .cta-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 50px;
             max-width: 600px;
             margin: 0 auto;
-            background: #252525;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .form-placeholder {
-            padding: 40px;
-            text-align: center;
-            color: #999;
-            font-style: italic;
-            background: #1a1a1a;
-            border-radius: 8px;
-            border: 2px dashed #444;
         }
         
         /* Footer */
         .footer {
-            background: #f8f8f8;
-            padding: 40px 20px;
+            padding: 60px 0;
             text-align: center;
-            color: #999;
+            background: #fafafa;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer p {
+            color: #666;
             font-size: 0.95em;
         }
         
         .footer a {
-            color: #d4a017;
+            color: #f4c430;
             text-decoration: none;
         }
         
@@ -224,20 +310,60 @@
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5em;
+                margin-bottom: 50px;
+            }
+            
+            .newsletter-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .arrow-divider {
+                transform: rotate(90deg);
+                font-size: 3em;
+            }
+            
+            .newsletter-left h3,
+            .newsletter-right h3 {
+                font-size: 1.6em;
+            }
+            
+            .profile-image {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .about-text h2 {
                 font-size: 2.2em;
             }
             
-            .hero .tagline {
-                font-size: 1.2em;
+            .courses h2 {
+                font-size: 2em;
             }
             
-            .story p {
-                font-size: 1.05em;
+            .cta h2 {
+                font-size: 2.2em;
             }
             
             .courses-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .story-content p {
+                font-size: 1.05em;
+            }
+            
+            .about,
+            .story,
+            .courses,
+            .cta {
+                padding: 80px 0;
             }
         }
     </style>
@@ -246,77 +372,93 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>未來，已經到來。</h1>
-            <p class="tagline">
-                很快就有一天，使用 AI 寫作會跟使用鍵盤打字一樣<span class="highlight">輕鬆自然</span>
-            </p>
+            <div class="hero-content">
+                <h1>
+                    把你的知識<br>
+                    變成<span class="highlight">內容資產</span>
+                </h1>
+                
+                <div class="newsletter-section">
+                    <div class="newsletter-left">
+                        <h3>想加入我們嗎？</h3>
+                        <p>訂閱後，立即獲得兩個免費 AI 寫作課程，學習如何用 AI 提升你的寫作能力。</p>
+                    </div>
+                    
+                    <div class="arrow-divider">
+                        →
+                    </div>
+                    
+                    <div class="newsletter-right">
+                        <h3>從這裡開始</h3>
+                        <script async data-uid="6f730ee774" src="https://chiukaun.kit.com/6f730ee774/index.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="profile-image">
+                    [ 在這裡放入你的頭像圖片 ]
+                </div>
+                
+                <div class="about-text">
+                    <h2>嗨，我是<span>周加恩</span></h2>
+                    <p class="letter-intro">[ 給尋求自由的創作者的一封信 ]</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Story Section -->
     <section class="story">
-        <p>
-            是每個寫作者必備的基礎知識。而知道如何掌控 AI 來為你寫作，會是這門知識的核心。
-        </p>
-        
-        <p>
-            我花了半年的時間整理我對寫作的所有技術，打造了一門《AI 電馭寫作》的課程，教你如何用 AI 輔助你大幅提升文章產能。
-        </p>
-        
-        <p class="big-text">
-            這套 AI 協作技術，讓我過去寫一篇兩千字的文章，從五個小時變成平均 30 分鐘，足足提升了 10x。
-        </p>
-        
-        <p>
-            甚至，有許多文章都是我躺在沙發上，用手機操作完成的。
-        </p>
-        
-        <p>
-            為什麼可以這樣？因為我發現，<strong>寫作跟寫程式的底層邏輯是一模一樣的事情</strong>。
-        </p>
-        
-        <p>
-            工程師最討厭反覆的勞力活，於是把大量既定寫好的函數，變成函數圖書館，需要的時候就隨時呼叫。現在有了 AI，我們就可以像工程師一樣寫作，把大量的反覆勞力活交給 AI，需要的時候隨時呼叫。
-        </p>
-        
-        <p>
-            而且我也讓過去複雜難解的寫作過程，變成一個清晰的生產流程，每個階段都有對應的目標和提詞協助。
-        </p>
-        
-        <p class="big-text">
-            這套方法，讓寫文章的過程，變成一種「Vibe Writing」。我稱之為<strong>「電馭寫作」</strong>。
-        </p>
-        
-        <p>
-            寫作是任何人都可以接觸到的強大內容槓桿，我靠寫作達成了人生翻身，走入下一個境界，認識各種貴人。
-        </p>
-        
-        <p>
-            如果你心中有熱情，總想分享自己的想法，但不確定怎樣開始；如果你經營品牌小團隊，很清楚內容經營品牌是必要的策略，但就是沒有時間精力人力；如果你是個人創業者，你需要極致應用你的每一分每一秒有限時間資源，創造最大價值——
-        </p>
-        
-        <p class="big-text">
-            我想幫助你達成你的目標。因為，<strong>我們都值得一次，讓實力被看見的機會。</strong>
-        </p>
+        <div class="container">
+            <div class="story-content">
+                <p>未來，已經到來。</p>
+                
+                <p>很快就有一天，使用 AI 寫作，跟使用鍵盤打字一樣輕鬆自然，是每個寫作者必備的基礎知識。而知道如何掌控 AI 來為你寫作，會是這門知識的核心。</p>
+                
+                <p class="big-text">
+                    這套 AI 協作技術，讓我過去寫一篇兩千字的文章，從五個小時變成平均 30 分鐘，足足提升了 10x。
+                </p>
+                
+                <p>甚至，有許多文章都是我躺在沙發上，用手機操作完成的。</p>
+                
+                <p>為什麼可以這樣？因為我發現，寫作跟寫程式的底層邏輯是一模一樣的事情。</p>
+                
+                <p>工程師最討厭反覆的勞力活，於是把大量既定寫好的函數，變成函數圖書館，需要的時候就隨時呼叫。現在有了 AI，我們就可以像工程師一樣寫作，把大量的反覆勞力活交給 AI，需要的時候隨時呼叫。</p>
+                
+                <p class="big-text">
+                    這套方法，讓寫文章的過程，變成一種「Vibe Writing」。我稱之為「電馭寫作」。
+                </p>
+                
+                <p>寫作是任何人都可以接觸到的強大內容槓桿，我靠寫作達成了人生翻身，走入下一個境界，認識各種貴人。</p>
+                
+                <p class="big-text">
+                    我想幫助你達成你的目標。因為，我們都值得一次，讓實力被看見的機會。
+                </p>
+            </div>
+        </div>
     </section>
 
-    <!-- Free Courses Section -->
-    <section class="free-courses">
+    <!-- Courses Section -->
+    <section class="courses">
         <div class="container">
-            <h2>領取兩個免費課程</h2>
+            <h2>兩個免費課程</h2>
             <p class="subtitle">填寫表單後，立即寄送到你的信箱</p>
             
             <div class="courses-grid">
                 <div class="course-card">
-                    <span class="course-label">免費課程一</span>
-                    <div class="course-icon">📖</div>
+                    <div class="course-number">01</div>
                     <h3>如何用 AI 寫出自己的獨特風格</h3>
                     <p>學習如何在使用 AI 輔助寫作的同時，保持你個人的獨特聲音和風格。</p>
                 </div>
                 
                 <div class="course-card">
-                    <span class="course-label">免費課程二</span>
-                    <div class="course-icon">✨</div>
+                    <div class="course-number">02</div>
                     <h3>創作者躍遷：從零到一的 10 個寫作心法</h3>
                     <p>每天寄送一封，分成十封發送。帶你建立扎實的寫作思維與習慣。</p>
                 </div>
@@ -325,24 +467,25 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta">
         <div class="container">
-            <h2>準備好開始了嗎？</h2>
+            <h2>
+                擁有做想做的事的<span class="highlight">自由</span><br>
+                以及不做不想做的事的<span class="highlight">自由</span>
+            </h2>
             <p>《AI 電馭寫作》課程已經進入第二波銷售階段。填寫以下問題，我會把課程相關資訊，以及免費課程寄到你的信箱中。</p>
             
-            <div class="form-container">
-                <div class="form-placeholder">
-                    [ 在這裡放入你的 ConvertKit 表單嵌入碼 ]
-                </div>
+            <div class="cta-box">
+                <script async data-uid="6f730ee774" src="https://chiukaun.kit.com/6f730ee774/index.js"></script>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 周加恩 Chiu Ka-un | <a href="https://blog.chiukaun.com" target="_blank">書不起部落格</a></p>
+        <div class="container">
+            <p>© 2025 周加恩 Chiu Ka-un | <a href="https://blog.chiukaun.com" target="_blank">書不起部落格</a></p>
+        </div>
     </footer>
 </body>
 </html>
-
-
