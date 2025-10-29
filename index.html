@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>周加恩 Chiu Ka-un | AI 電馭寫作</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/chocolate-classical-sans" rel="stylesheet">
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
     <style>
         * {
             margin: 0;
@@ -12,311 +17,517 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-            background: #fafafa;
+            font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 40px;
         }
         
         /* Hero Section */
         .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            padding: 100px 0 80px;
-            background: #fafafa;
+            background: #f5f5f5;
+            padding: 100px 40px 40px;
         }
         
-        .hero-content {
-            width: 100%;
-        }
-        
-        .hero-content h1 {
-            font-size: 5.5em;
-            font-weight: 700;
+        .hero h1 {
+            font-size: 4.5em;
+            font-weight: 400;
             line-height: 1.1;
             margin-bottom: 80px;
-            letter-spacing: -0.03em;
-            color: #0a1f44;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            text-align: left;
         }
         
-        .hero-content .highlight {
+        .hero h1 .highlight {
             color: #f4c430;
         }
         
         .newsletter-section {
             display: grid;
             grid-template-columns: 1fr auto 1.2fr;
-            gap: 40px;
+            gap: 60px;
             align-items: center;
             max-width: 1000px;
+            margin: 0 0 60px 0;
+            text-align: left;
         }
         
         .newsletter-left h3 {
-            font-size: 2.2em;
+            font-size: 2em;
             margin-bottom: 20px;
-            font-weight: 700;
-            color: #0a1f44;
+            font-weight: 400;
         }
         
         .newsletter-left p {
-            color: #555;
-            font-size: 1.05em;
-            line-height: 1.7;
+            font-family: "Chocolate Classical Sans", "Noto Sans TC", sans-serif;
+            color: #444;
+            font-size: 1em;
+            line-height: 1.6;
         }
         
         .arrow-divider {
             font-size: 4em;
             color: #f4c430;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         .newsletter-right h3 {
-            font-size: 2.2em;
-            margin-bottom: 25px;
-            font-weight: 700;
-            color: #0a1f44;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 400;
         }
         
-        .newsletter-right .formkit-form {
-            background: #ffffff;
-            border: 2px solid #e0e0e0;
-            padding: 25px;
-            border-radius: 8px;
+        .media-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            margin-bottom: 0px;
         }
         
-        .cta-box .formkit-form {
-            background: transparent;
+        .media-logos img {
+            height: 110px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .media-logos img:hover {
+            opacity: 1;
         }
         
         /* About Section */
         .about {
-            padding: 120px 0 80px;
-            background: #0a1f44;
+            background: #0D233B;
+            color: #ffffff;
+            padding: 100px 40px;
             text-align: center;
-        }
-        
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
         }
         
         .profile-image {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            background: #e0e0e0;
+            margin: 0 auto 40px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
-            font-size: 0.9em;
-            text-align: center;
-            padding: 20px;
-            margin: 0 auto 60px;
         }
         
-        .about-text h2 {
-            font-size: 3em;
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about h2 {
+            font-size: 2.5em;
+            font-weight: 400;
             margin-bottom: 40px;
-            font-weight: 700;
-            color: #ffffff;
+            line-height: 1.3;
         }
         
-        .about-text h2 span {
+        .about h2 .highlight {
             color: #f4c430;
         }
         
-        .letter-intro {
-            font-size: 1.15em;
-            color: #4db8ff;
+        .letter-link {
+            color: #f4c430;
+            font-size: 1.1em;
             margin-bottom: 60px;
-            font-style: italic;
+            display: inline-block;
+            text-decoration: none;
         }
         
-        /* Story Section */
-        .story {
-            padding: 100px 0;
-            background: #ffffff;
-        }
-        
-        .story-content {
-            max-width: 800px;
+        .about-content {
+            max-width: 750px;
             margin: 0 auto;
         }
         
-        .story-content p {
+        .about-content p {
+            font-family: "Chocolate Classical Sans", "Noto Sans TC", sans-serif;
             font-size: 1.15em;
-            line-height: 1.9;
-            color: #444;
+            line-height: 1.8;
             margin-bottom: 25px;
-            text-align: left;
+            color: #e0e0e0;
         }
         
-        .story-content .big-text {
-            font-size: 1.35em;
-            font-weight: 500;
-            color: #0a1f44;
-            margin: 40px 0;
+        .about-content p.dimmed {
+            color: #6b7a8f;
         }
         
-        /* Courses Section */
-        .courses {
-            padding: 120px 0;
-            background: #fafafa;
-        }
-        
-        .courses h2 {
-            text-align: center;
-            font-size: 2.8em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #0a1f44;
-        }
-        
-        .courses .subtitle {
-            text-align: center;
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 80px;
-        }
-        
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .course-card {
-            background: #ffffff;
-            border: 2px solid #e0e0e0;
-            border-radius: 16px;
-            padding: 50px 40px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .course-card:hover {
-            border-color: #f4c430;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(244, 196, 48, 0.15);
-        }
-        
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #f4c430, #d4a017);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .course-card:hover::before {
-            opacity: 1;
-        }
-        
-        .course-number {
-            font-size: 3em;
-            font-weight: 700;
+        .about-content p.highlight {
             color: #f4c430;
-            margin-bottom: 20px;
-            line-height: 1;
         }
         
-        .course-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            font-weight: 600;
-            color: #0a1f44;
-        }
-        
-        .course-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1.05em;
-        }
-        
-        /* CTA Section */
-        .cta {
-            padding: 120px 0;
-            background: #0a1f44;
-            text-align: center;
-        }
-        
-        .cta h2 {
-            font-size: 3.5em;
-            margin-bottom: 30px;
-            font-weight: 700;
-            line-height: 1.2;
+        .more-btn {
+            margin-top: 50px;
+            padding: 14px 32px;
+            background: transparent;
+            border: 2px solid #ffffff;
             color: #ffffff;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
         
-        .cta .highlight {
+        /* Three Ways Section */
+        .three-ways {
+            background: #2479D8;
+            color: #ffffff;
+            padding: 100px 40px;
+        }
+        
+        .three-ways-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .three-ways h2 {
+            font-size: 3.5em;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        
+        .three-ways h2 .highlight {
             color: #f4c430;
         }
         
-        .cta p {
-            font-size: 1.2em;
-            color: #ccc;
-            margin-bottom: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        .ways-list {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
         }
         
-        .cta-box {
+        .way-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+        }
+        
+        .way-number {
+            font-size: 2.5em;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .way-content h3 {
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        
+        .way-content p {
+            font-family: "Chocolate Classical Sans", "Noto Sans TC", sans-serif;
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #ececec;
+            margin-bottom: 25px;
+        }
+        
+        .way-btn {
+            padding: 12px 28px;
+            background: #f4c430;
+            border: none;
+            color: #1a1a1a;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .way-btn:hover {
+            background: #d4a017;
+            transform: translateY(-2px);
+        }
+        
+        /* Recent Issues Section */
+        .recent-issues {
             background: #ffffff;
-            border-radius: 12px;
-            padding: 50px;
+            padding: 80px 40px 60px;
+            text-align: center;
+        }
+        
+        .recent-issues h2 {
+            font-size: 0.9em;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .recent-issues h3 {
+            font-size: 3em;
+            font-weight: 400;
+            margin-bottom: 60px;
+        }
+        
+        .recent-issues h3 .the {
+            color: #f4c430;
+        }
+        
+        .substack-embeds-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 50px;
+        }
+        
+        .substack-embed-wrapper {
+            width: 100%;
+        }
+        
+        .issues-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 50px;
+        }
+        
+        .issue-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .issue-card:nth-child(2) {
+            background: #f4c430;
+            color: #1a1a1a;
+        }
+        
+        .issue-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .issue-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .issue-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ddd;
+        }
+        
+        .issue-meta {
+            flex: 1;
+        }
+        
+        .issue-meta .title {
+            font-size: 0.85em;
+            opacity: 0.7;
+        }
+        
+        .issue-number {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .issue-title {
+            font-size: 1.3em;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        
+        .read-more-btn {
+            margin-top: 30px;
+            padding: 14px 32px;
+            background: transparent;
+            border: 2px solid #1a1a1a;
+            color: #1a1a1a;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        
+        /* Freedom Section */
+        .freedom {
+            background: #ffffff;
+            padding: 40px 40px 120px;
+            text-align: center;
+        }
+        
+        .freedom h2 {
+            font-size: 3.5em;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .freedom h2 .blue {
+            color: #f4c430;
+        }
+        
+        .freedom .arrow {
+            font-size: 3em;
+            color: #f4c430;
+            margin: 30px 0;
+        }
+        
+        .freedom h3 {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        .freedom p {
+            font-family: "Chocolate Classical Sans", "Noto Sans TC", sans-serif;
+            color: #666;
+            font-size: 1.05em;
             max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .freedom-form {
+            max-width: 500px;
             margin: 0 auto;
+        }
+        
+        /* ConvertKit Form Styling */
+        .formkit-form .formkit-fields {
+            display: flex !important;
+            gap: 10px;
+            align-items: stretch;
+        }
+        
+        .formkit-form .formkit-field {
+            flex: 1;
+            margin: 0 !important;
+        }
+        
+        .formkit-form .formkit-input {
+            height: 50px !important;
+            padding: 0 20px !important;
+            font-size: 16px !important;
+            border: 2px solid #e0e0e0 !important;
+            border-radius: 25px !important;
+            background: #ffffff !important;
+            transition: border-color 0.3s ease !important;
+        }
+        
+        .formkit-form .formkit-input:focus {
+            border-color: #f4c430 !important;
+            outline: none !important;
+        }
+        
+        .formkit-form .formkit-submit {
+            height: 50px !important;
+            padding: 0 32px !important;
+            background: #f4c430 !important;
+            border: none !important;
+            border-radius: 25px !important;
+            color: #1a1a1a !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            margin: 0 !important;
+            flex-shrink: 0;
+        }
+        
+        .formkit-form .formkit-submit:hover {
+            background: #d4a017 !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero section form */
+        .newsletter-right .formkit-form .formkit-fields {
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 30px;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .newsletter-right .formkit-form .formkit-input {
+            border: none !important;
+            background: transparent !important;
+        }
+        
+        .newsletter-right .formkit-form .formkit-submit {
+            height: 44px !important;
+        }
+        
+        /* Three ways section form - white on dark blue */
+        .three-ways .formkit-form .formkit-input {
+            background: #ffffff !important;
+            color: #1a1a1a !important;
+        }
+        
+        .three-ways .formkit-form .formkit-submit {
+            background: #f4c430 !important;
+            color: #1a1a1a !important;
+        }
+        
+        .three-ways .formkit-form .formkit-submit:hover {
+            background: #d4a017 !important;
         }
         
         /* Footer */
         .footer {
-            padding: 60px 0;
-            text-align: center;
             background: #fafafa;
+            padding: 60px 40px;
             border-top: 1px solid #e0e0e0;
         }
         
-        .footer p {
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-links a {
             color: #666;
+            text-decoration: none;
             font-size: 0.95em;
         }
         
-        .footer a {
-            color: #f4c430;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
+        .social-links {
+            display: flex;
+            gap: 20px;
         }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-            
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 2.5em;
-                margin-bottom: 50px;
             }
             
             .newsletter-section {
@@ -326,44 +537,37 @@
             
             .arrow-divider {
                 transform: rotate(90deg);
-                font-size: 3em;
             }
             
-            .newsletter-left h3,
-            .newsletter-right h3 {
-                font-size: 1.6em;
-            }
-            
-            .profile-image {
-                width: 160px;
-                height: 160px;
-            }
-            
-            .about-text h2 {
-                font-size: 2.2em;
-            }
-            
-            .courses h2 {
-                font-size: 2em;
-            }
-            
-            .cta h2 {
-                font-size: 2.2em;
-            }
-            
-            .courses-grid {
+            .three-ways-container {
                 grid-template-columns: 1fr;
             }
             
-            .story-content p {
-                font-size: 1.05em;
+            .substack-embeds-grid {
+                grid-template-columns: 1fr;
             }
             
-            .about,
-            .story,
-            .courses,
-            .cta {
-                padding: 80px 0;
+            .issues-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            /* Mobile form adjustments */
+            .formkit-form .formkit-fields {
+                flex-direction: column !important;
+            }
+            
+            .formkit-form .formkit-submit {
+                width: 100%;
+            }
+            
+            .newsletter-right .formkit-form .formkit-fields {
+                padding: 5px;
             }
         }
     </style>
@@ -372,27 +576,29 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>
-                    把你的知識<br>
-                    變成<span class="highlight">內容資產</span>
-                </h1>
-                
-                <div class="newsletter-section">
-                    <div class="newsletter-left">
-                        <h3>想加入我們嗎？</h3>
-                        <p>訂閱後，立即獲得兩個免費 AI 寫作課程，學習如何用 AI 提升你的寫作能力。</p>
-                    </div>
-                    
-                    <div class="arrow-divider">
-                        →
-                    </div>
-                    
-                    <div class="newsletter-right">
-                        <h3>從這裡開始</h3>
-                        <script async data-uid="6f730ee774" src="https://chiukaun.kit.com/6f730ee774/index.js"></script>
-                    </div>
+            <h1>
+                把你的知識<br>
+                變成<span class="highlight">內容資產</span>
+            </h1>
+            
+            <div class="newsletter-section">
+                <div class="newsletter-left">
+                    <h3>加入我們，<br>成為電馭創作者</h3>
+                    <p>訂閱後，立即獲得兩個免費 AI 寫作課程，學習如何用 AI 提升你的寫作能力。</p>
                 </div>
+                
+                <div class="arrow-divider">→</div>
+                
+                <div class="newsletter-right">
+                    <h3>從這裡開始</h3>
+                    <form action="https://app.kit.com/forms/8716635/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8716635" data-uid="6f730ee774" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Subscribe</span></button></div></div></form>
+                </div>
+            </div>
+            
+            <div class="media-logos">
+                <img src="images/1_wNPZnkOKGgwVvscPVk30MQ.jpg" alt="關鍵評論">
+                <img src="images/2ab9c9d5258ce52550183a0cc3261452.jpg" alt="商周">
+                <img src="images/images.png" alt="數位時代">
             </div>
         </div>
     </section>
@@ -400,91 +606,154 @@
     <!-- About Section -->
     <section class="about">
         <div class="container">
-            <div class="about-content">
-                <div class="profile-image">
-                    [ 在這裡放入你的頭像圖片 ]
-                </div>
-                
-                <div class="about-text">
-                    <h2>嗨，我是<span>周加恩</span></h2>
-                    <p class="letter-intro">[ 給尋求自由的創作者的一封信 ]</p>
-                </div>
+            <div class="profile-image">
+                <img src="images/unnamed.jpg" alt="周加恩">
             </div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="story">
-        <div class="container">
-            <div class="story-content">
+            
+            <h2>嗨，我是周加恩。<br>我幫助<span class="highlight">內容創作者</span>掌控工作與生活。</h2>
+            
+            <div class="about-content">
                 <p>未來，已經到來。</p>
                 
-                <p>很快就有一天，使用 AI 寫作，跟使用鍵盤打字一樣輕鬆自然，是每個寫作者必備的基礎知識。而知道如何掌控 AI 來為你寫作，會是這門知識的核心。</p>
+                <p>很快就有一天，使用 AI 寫作會跟使用鍵盤打字一樣輕鬆自然。</p>
                 
-                <p class="big-text">
-                    這套 AI 協作技術，讓我過去寫一篇兩千字的文章，從五個小時變成平均 30 分鐘，足足提升了 10x。
-                </p>
+                <p>而掌控 AI 來為你寫作，會是寫作者知識的核心。</p>
                 
-                <p>甚至，有許多文章都是我躺在沙發上，用手機操作完成的。</p>
+                <p>我花了半年的時間整理我對寫作的所有技術，打造了一門《AI 電馭寫作》的課程。</p>
                 
-                <p>為什麼可以這樣？因為我發現，寫作跟寫程式的底層邏輯是一模一樣的事情。</p>
+                <p class="highlight">這套 AI 協作技術，讓我寫一篇兩千字的文章，從五小時變成平均 30 分鐘，足足提升了 10x。</p>
                 
-                <p>工程師最討厭反覆的勞力活，於是把大量既定寫好的函數，變成函數圖書館，需要的時候就隨時呼叫。現在有了 AI，我們就可以像工程師一樣寫作，把大量的反覆勞力活交給 AI，需要的時候隨時呼叫。</p>
-                
-                <p class="big-text">
-                    這套方法，讓寫文章的過程，變成一種「Vibe Writing」。我稱之為「電馭寫作」。
-                </p>
-                
-                <p>寫作是任何人都可以接觸到的強大內容槓桿，我靠寫作達成了人生翻身，走入下一個境界，認識各種貴人。</p>
-                
-                <p class="big-text">
-                    我想幫助你達成你的目標。因為，我們都值得一次，讓實力被看見的機會。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section class="courses">
-        <div class="container">
-            <h2>兩個免費課程</h2>
-            <p class="subtitle">填寫表單後，立即寄送到你的信箱</p>
+                <p>工程師最討厭反覆的勞力活，於是把大量既定寫好的函數變成函數圖書館。</p>
             
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-number">01</div>
-                    <h3>如何用 AI 寫出自己的獨特風格</h3>
-                    <p>學習如何在使用 AI 輔助寫作的同時，保持你個人的獨特聲音和風格。</p>
+                <p>現在有了 AI，我們就可以像工程師一樣寫作。</p>
+                
+                <p>我把過去複雜難解的寫作過程，變成一個清晰的生產流程，每個階段都有對應的提詞協助。</p>
+                
+                <p>這套方法，讓寫文章的過程變成一種「Vibe Writing」——我稱之為「電馭寫作」。</p>
+                
+                <p>寫作，是任何人都可以接觸到的強大內容槓桿。</p>
+                
+                <p>我靠寫作達成了人生翻身，走入下一個境界，認識各種貴人。</p>
+                
+                <p>現在，我想幫助你達成你的目標。<p>
+
+                <p class="highlight">因為，我們都值得一次，讓實力被看見的機會。</p>
+            </div>
+            
+            <a href="https://blog.chiukaun.com/p/54c" class="more-btn">更多關於我</a>
+        </div>
+    </section>
+
+    <!-- Three Ways Section -->
+    <section class="three-ways">
+        <div class="three-ways-container">
+            <div>
+                <h2>我有三種方式<br>可以幫助<span class="highlight">你</span>。</h2>
+            </div>
+            
+            <div class="ways-list">
+                <div class="way-item">
+                    <div class="way-number">01</div>
+                    <div class="way-content">
+                        <h3>《書不起》深度分析電子報</h3>
+                        <p>每週我會分享一篇關於 AI 與創作者的研究思考／書摘。加入 8931 位訂閱者，一起在錯綜復雜的時代中清晰洞察。</p>
+                        <button class="way-btn" onclick="window.open('https://blog.chiukaun.com/', '_blank')">訂閱電子報</button>
+                    </div>
                 </div>
                 
-                <div class="course-card">
-                    <div class="course-number">02</div>
-                    <h3>創作者躍遷：從零到一的 10 個寫作心法</h3>
-                    <p>每天寄送一封，分成十封發送。帶你建立扎實的寫作思維與習慣。</p>
+                <div class="way-item">
+                    <div class="way-number">02</div>
+                    <div class="way-content">
+                        <h3>AI 電馭寫作：完整課程</h3>
+                        <p>市面上最深度的 AI 寫作教學課程，將寫作拆解成七大階段個別擊破，快速上手打造個人品牌。</p>
+                        <button class="way-btn" onclick="window.open('https://blog.chiukaun.com/p/ai-ce7', '_blank')">課程介紹</button>
+                    </div>
+                </div>
+                
+                <div class="way-item">
+                    <div class="way-number">03</div>
+                    <div class="way-content">
+                        <h3>如何用 AI 寫出自己的獨特風格：免費課程 </h3>
+                        <p>三個步驟，輕鬆駕馭 AI 寫出專屬於你的聲音，而不是讓你變成平庸的雜訊之一。</p>
+                        <form action="https://app.kit.com/forms/8716635/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8716635" data-uid="6f730ee774" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Subscribe</span></button></div></div></form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- Recent Issues Section -->
+    <section class="recent-issues">
+        <div class="container">
+            <h2>最新文章</h2>
+            <h3><span class="the">書不起</span> 電子報</h3>
+            
+            <div class="substack-embeds-grid">
+                <div class="substack-embed-wrapper">
+                    <div class="substack-post-embed"><p lang="en">歡迎光臨「內容大通膨時代」 by 加恩</p><p>把每篇文章當成一個「貨幣」看待，你會發現很多有趣的事情。</p><a data-post-link href="https://blog.chiukaun.com/p/704">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+                </div>
+                <div class="substack-embed-wrapper">
+                    <div class="substack-post-embed"><p lang="en">如何憑空創造財富 by 加恩</p><p>人從來不是仰賴資源而活，而是仰賴思想。</p><a data-post-link href="https://blog.chiukaun.com/p/433">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+                </div>
+                <div class="substack-embed-wrapper">
+                    <div class="substack-post-embed"><p lang="en">51 分就好的哲學 by 加恩</p><p>高手過招，只在那微小的 1% 優勢——然後專注在打造一個系統，讓你可以持續產出這個優勢，累積複利。</p><a data-post-link href="https://blog.chiukaun.com/p/51">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+                </div>
+                <div class="substack-embed-wrapper">
+                    <div class="substack-post-embed"><p lang="en">創作者，如何找到自己的「定位」？ by 加恩</p><p>這個問題明明超難，大家都假裝它很簡單。</p><a data-post-link href="https://blog.chiukaun.com/p/185">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+                </div>
+                <div class="substack-embed-wrapper">
+                    <div class="substack-post-embed"><p lang="en">2025 年，我用 AI 找資料提升效率 400% 的方法 by 加恩</p><p></p><a data-post-link href="https://blog.chiukaun.com/p/2025-ai-400">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+                </div>
+                <div class="substack-embed-wrapper">
+                    <div class="substack-post-embed"><p lang="en">《 AI 前輩 》：使用喬哈里溝通視窗突破個人盲區 by 加恩</p><p>這是，我目前寫過效能最強大的提詞。</p><a data-post-link href="https://blog.chiukaun.com/p/ai-90e">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+                </div>
+            </div>
+
+            <button class="read-more-btn">閱讀更多</button>
+        </div>
+    </section>
+
+    <!-- Freedom Section -->
+    <section class="freedom">
         <div class="container">
             <h2>
-                擁有做想做的事的<span class="highlight">自由</span><br>
-                以及不做不想做的事的<span class="highlight">自由</span>
+                <span class="blue">擁有自由</span><br>
+                做你想做的事。
             </h2>
-            <p>《AI 電馭寫作》課程已經進入第二波銷售階段。填寫以下問題，我會把課程相關資訊，以及免費課程寄到你的信箱中。</p>
+            <h2>
+                <span class="blue">擁有自由</span><br>
+                把家人放在第一位。
+            </h2>
+            <h2>
+                <span class="blue">擁有自由</span><br>
+                掌控你的故事。
+            </h2>
             
-            <div class="cta-box">
-                <script async data-uid="6f730ee774" src="https://chiukaun.kit.com/6f730ee774/index.js"></script>
+            <div class="arrow">↓</div>
+            
+            <h3>訂閱開始</h3>
+            <p>加入 200K+ 訂閱者，獲得獨家的技巧、策略和資源，啟動、成長並獲利你的內容事業。</p>
+            
+            <div class="freedom-form">
+                <form action="https://app.kit.com/forms/8716635/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8716635" data-uid="6f730ee774" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Subscribe</span></button></div></div></form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2025 周加恩 Chiu Ka-un | <a href="https://blog.chiukaun.com" target="_blank">書不起部落格</a></p>
+        <div class="footer-content">
+            <div class="footer-logo">周加恩 |</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Fulfillment Policy</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="#">𝕏</a>
+                <a href="#">IG</a>
+                <a href="#">in</a>
+            </div>
         </div>
     </footer>
 </body>
